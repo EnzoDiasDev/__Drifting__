@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #111111;
+    color: #dddddd;
+}
+
+
+/* Header */
+/* --------------------------------------------------------- */
+
+#topo {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 25px 80px;
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #a200ff44;
+}
+
+#topo img {
+    height: 70px;
+    width: auto;
+}
+
+.texto_topo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#topo h1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #cc66ff;
+}
+
+#topo p {
+    font-size: 13px;
+    color: #888888;
+}
+
+.header_sep {
+    border: none;
+    border-top: 1px solid #222222;
+}
+
+
+/* Nav */
+/* --------------------------------------------------------- */
+
+#menu-principal {
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #1e1e1e;
+}
+
+#menu-principal ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-principal a {
+    display: inline-block;
+    color: #999999;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 16px 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+#menu-principal a:hover {
+    color: #cc66ff;
+    border-bottom-color: #a200ff;
+    font-size: 13px;
+}
+
+
+/* Main */
+/* --------------------------------------------------------- */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+
+/* Main - selection*/
+/* --------------------------------------------------------- */
+
+main section {
+    margin-bottom: 70px;
+}
+
+main section h2 {
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #a200ff44;
+}
+
+
+/* Main - pioneiros*/
+/* --------------------------------------------------------- */
+
+main section article,
+#pioneiros .content > div {
+    background-color: #1a1a1a;
+    border-left: 3px solid #a200ff;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 16px;
+}
+
+main section article h3,
+#pioneiros .content h3 {
+    font-size: 20px;
+    color: #cc66ff;
+    margin-bottom: 10px;
+}
+
+main section article p,
+#pioneiros .content p {
+    font-size: 15px;
+    color: #cccccc;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+#pioneiros .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#pioneiros .content > div {
+    margin-bottom: 0;
+}
+
+#pioneiros aside {
+    background-color: #1a1a1a;
+    border-left: 3px solid #cc66ff;
+    border-radius: 10px;
+    padding: 20px 28px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #aaaaaa;
+}
+
+#pioneiros aside h4 {
+    font-size: 14px;
+    color: #cc66ff;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* Main - sumário */
+/* --------------------------------------------------------- */
+
+main section details {
+    background-color: #111111;
+    border: 1px solid #a200ff33;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #aaaaaa;
+    cursor: pointer;
+}
+
+main section details summary {
+    color: #cc66ff;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* Main - blockquote */
+/* --------------------------------------------------------- */
+
+main section blockquote {
+    background-color: #111111;
+    border-left: 3px solid #a200ff;
+    border-radius: 8px;
+    padding: 14px 20px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #999999;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+
+/* Main - pre */
+/* --------------------------------------------------------- */
+
+main section pre {
+    background-color: #0a0a0a;
+    color: #cc66ff;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin-top: 12px;
+    border: 1px solid #a200ff33;
+    overflow-x: auto;
+}
+
+main section code {
+    background-color: #0a0a0a;
+    color: #cc66ff;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid #a200ff33;
+}
+
+
+/* Main - listas*/
+/* --------------------------------------------------------- */
+
+main section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+main section ul li {
+    background-color: #111111;
+    border-left: 2px solid #a200ff44;
+    border-radius: 6px;
+    padding: 8px 14px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+main section ol {
+    list-style: none;
+    padding: 0;
+    counter-reset: lista;
+}
+
+main section ol li {
+    counter-increment: lista;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 14px 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #cccccc;
+}
+
+main section ol li::before {
+    content: counter(lista) ". ";
+    color: #a200ff;
+    font-weight: bold;
+}
+
+
+/* Main - tabelas*/
+/* --------------------------------------------------------- */
+
+main section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+main section table th {
+    background-color: #0a0a0a;
+    color: #cc66ff;
+    padding: 12px 18px;
+    text-align: left;
+    border-bottom: 2px solid #a200ff44;
+}
+
+main section table td {
+    padding: 12px 18px;
+    border-bottom: 1px solid #1e1e1e;
+    color: #cccccc;
+}
+
+main section table caption {
+    text-align: left;
+    font-size: 13px;
+    color: #888888;
+    margin-bottom: 8px;
+}
+
+main section table tfoot td {
+    color: #666666;
+    font-size: 12px;
+}
+
+main section table tr:hover td {
+    background-color: #1e1e1e;
+}
+
+
+/* Main - formulários */
+/* --------------------------------------------------------- */
+
+main section fieldset {
+    border: 1px solid #a200ff33;
+    border-radius: 10px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+main section legend {
+    font-size: 13px;
+    color: #cc66ff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0 8px;
+}
+
+main section label {
+    font-size: 13px;
+    color: #888888;
+}
+
+main section input[type="text"],
+main section input[type="email"],
+main section input[type="number"],
+main section input[type="date"],
+main section select,
+main section textarea {
+    background-color: #0a0a0a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 14px;
+    outline: none;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main section input:focus,
+main section select:focus,
+main section textarea:focus {
+    border-color: #a200ff;
+}
+
+main section textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+main section input[type="submit"] {
+    background-color: #a200ff;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: fit-content;
+    transition: background-color 0.2s;
+}
+
+main section input[type="submit"]:hover {
+    background-color: #cc66ff;
+}
+
+
+/* Main - header secundários*/
+/* --------------------------------------------------------- */
+
+body > header {
+    background-color: #0a0a0a;
+    border-top: 1px solid #1e1e1e;
+    border-bottom: 1px solid #a200ff44;
+    padding: 30px 80px;
+}
+
+body > header h1 {
+    font-size: 24px;
+    color: #cc66ff;
+    margin-bottom: 6px;
+}
+
+body > header p {
+    font-size: 13px;
+    color: #888888;
+}
+
+body > nav {
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #1e1e1e;
+}
+
+body > nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+body > nav a {
+    display: inline-block;
+    color: #999999;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 14px 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+body > nav a:hover {
+    color: #cc66ff;
+    border-bottom-color: #a200ff;
+}
+
+
+/* Footer*/
+/* --------------------------------------------------------- */
+
+footer {
+    background-color: #0a0a0a;
+    border-top: 1px solid #1e1e1e;
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+footer p {
+    font-size: 13px;
+    color: #666666;
+}
+
+footer address {
+    font-size: 13px;
+    color: #666666;
+    font-style: normal;
+    margin-bottom: 6px;
+}
